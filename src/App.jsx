@@ -3,6 +3,7 @@ import RegisterPage from './RegisterPage';
 import './App.css'
 import  Home from './Home.jsx';
 
+
 function App() {
   return (
     <><svg style={{width:"5rem"}} xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48">
