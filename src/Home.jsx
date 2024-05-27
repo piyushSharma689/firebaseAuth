@@ -1,30 +1,30 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
+export let ur='null';
 
 
 document.title="Home"
 const Home = () => {
-  const [u, setu]= useState("null")
+  
   const navigate = useNavigate();
 
   const toRegister = (utype) => {
-    setu(utype);
-    navigate("/Register");
+    navigate("/Login");
+    ur=utype;
   };
-
-  console.log(u)
 
   return (
     
     <>
       <h1>Login as </h1>
 
-      <button onClick={()=>toRegister("student")}>Student</button>
+      <button onClick={()=>toRegister("Student")}>Student</button>
 
-      <button onClick={()=>toRegister("teacher")}>Teacher</button>
+      <button onClick={()=>toRegister("Teacher")}>Teacher</button>
     </>
   );
 };
+
 
 export default Home;

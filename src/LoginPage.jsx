@@ -1,12 +1,16 @@
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 import { Link } from "react-router-dom";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { app } from "./firbase";
 import Otherlg from "./Otherlg";
 
+
+
+
+
 const auth = getAuth(app);
 
-function LoginPage(props) {
+function LoginPage() {
 
     document.title="Login"
 
@@ -15,7 +19,8 @@ function LoginPage(props) {
   const Login = () => {
     signInWithEmailAndPassword(auth, User.email, User.pass)
       .then(() => {
-        alert("logged in");
+      alert("logged in")
+      
       })
       .catch((err) => {
         alert(err);
@@ -24,12 +29,11 @@ function LoginPage(props) {
   };
 
   return (
+    
     <div className="container">
-      <Link to="/">
-        <h2 id="back">&#10554;</h2>
-      </Link>
+      
 
-      <h2>LOGIN</h2>
+      <h2 style={{padding:'2rem'}} >LOGIN</h2>
       <input
         type="email"
         required
@@ -52,6 +56,7 @@ function LoginPage(props) {
       <Link to="/Register">Register</Link>
       <Otherlg />
     </div>
+  
   );
 }
 

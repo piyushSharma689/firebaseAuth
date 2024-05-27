@@ -5,6 +5,7 @@ import { getAuth, createUserWithEmailAndPassword , onAuthStateChanged  } from "f
 import { app } from './firbase';
 import { getDatabase ,ref, set } from "firebase/database";
 
+
 const db = getDatabase();
 
 const auth= getAuth(app);
@@ -39,7 +40,8 @@ function RegisterPage(props) {
     <>
      <div className="container"  style={{padding:"1rem 3rem"}} >
      <Link to="/"><h2 id="back">&#10554;</h2></Link>
-      <h2>REGISTER</h2>
+      <h2 style={{padding:'1rem'}}>REGISTER</h2>
+   
       
       <input type="text" placeholder="First Name" value={User.fname} onChange={e=>{setUser({...User, fname:e.target.value})}}/>
       <input type="text" placeholder="Last Name" value={User.lname} onChange={e=>{setUser({...User, lname:e.target.value})}}/>
