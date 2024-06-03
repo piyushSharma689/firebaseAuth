@@ -1,1 +1,1 @@
-<a href="https://firebase-auth-black.vercel.app/">click here</a>
+<a href="https://auth69.vercel.app/">click here</a>
