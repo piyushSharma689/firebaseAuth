@@ -33,7 +33,7 @@ function LoginPage() {
     <div className="container">
       
 
-      <h2 style={{padding:'2rem'}} >LOGIN</h2>
+      <h2 style={{padding:'2rem'}} >LOGIN.</h2>
       <input
         type="email"
         required
